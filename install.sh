@@ -1,0 +1,1 @@
+stow --verbose=1 --target=$HOME --restow home
