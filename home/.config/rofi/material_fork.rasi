@@ -35,7 +35,7 @@
 
 window {
 	transparency: "real";
-	background-color: #263238AA;
+	background-color: #263238DD;
   width: 33%;
   height: 50%;
 }
