@@ -5,34 +5,36 @@
 # Sleep\0icon\x1fmedia-playback-pause-symbolic
 # Shutdown\0icon\x1fsystem-shutdown-symbolic
 # Restart\0icon\x1fsystem-reboot-symbolic" | rofi -dmenu -no-history -show-icons -p "Power")
-power_result=$(printf "Lock
-Logout
-Sleep
-Shutdown
-Restart" | rofi -dmenu -no-history -p "Power")
+LOCK="󰌾 Lock"
+LOGOUT="󰍃 Logout"
+SLEEP="󰤄 Sleep"
+SHUTDOWN="󰐥 Shutdown"
+RESTART="󰜉 Restart"
+
+power_result=$(printf "$LOCK\n$LOGOUT\n$SLEEP\n$SHUTDOWN\n$RESTART" | rofi -dmenu -no-history -p "Power")
 
 
 
 # https://stackoverflow.com/questions/45698101/writing-case-statements
 case $power_result in
 
-  "Lock")
+  "$LOCK")
     pidof hyprlock || hyprlock
     ;;
 
-  "Logout")
+  "$LOGOUT")
     hyprshutdown || hyprctl dispatch exit
     ;;
 
-  "Sleep")
+  "$SLEEP")
     systemctl suspend -i
     ;;
 
-  "Shutdown")
+  "$SHUTDOWN")
     hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
     ;;
   
-  "Restart")
+  "$RESTART")
     hyprshutdown -t 'Restarting...' --post-cmd 'reboot'
     ;;
 
