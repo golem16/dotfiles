@@ -116,6 +116,7 @@ element-text, element-icon {
 element-icon {
   size: 64px;
 }
+
 element-text {
   vertical-align: 0.5;
 }

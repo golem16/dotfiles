@@ -192,18 +192,19 @@
   "custom/power": {
     "format": " ⏻ ",
     "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-    "menu-actions": {
-      // "shutdown": "shutdown",
-      // "reboot": "reboot",
-      // "suspend": "systemctl suspend",
-      // "hibernate": "systemctl hibernate"
-      // Use Rofi for this at some point
-      "shutdown": "notify-send \"Not implemented, make a power menu\"",
-      "reboot": "notify-send \"Not implemented, make a power menu\"",
-      "suspend": "notify-send \"Not implemented, make a power menu\"",
-      "hibernate": "notify-send \"Not implemented, make a power menu\""
-    }
+    "on-click": "$HOME/.config/rofi/menus/power.sh"
+    // "menu": "on-click",
+    // "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    // "menu-actions": {
+    //   // "shutdown": "shutdown",
+    //   // "reboot": "reboot",
+    //   // "suspend": "systemctl suspend",
+    //   // "hibernate": "systemctl hibernate"
+    //   // Use Rofi for this at some point
+    //   "shutdown": "notify-send \"Not implemented, make a power menu\"",
+    //   "reboot": "notify-send \"Not implemented, make a power menu\"",
+    //   "suspend": "notify-send \"Not implemented, make a power menu\"",
+    //   "hibernate": "notify-send \"Not implemented, make a power menu\""
+    // }
   }
 }
