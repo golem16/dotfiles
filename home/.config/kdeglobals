@@ -1,0 +1,7 @@
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
+
+[General]
+# We don't use konsole
+TerminalApplication=kitty
