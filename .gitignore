@@ -1,2 +1,8 @@
 # Symlink to other wallpapers
 home/.config/hypr/wallpapers/current.jpg
+
+# Unused wallpapers
+home/.config/hypr/wallpapers/wp8.png
+home/.config/hypr/wallpapers/wp7.png
+home/.config/hypr/wallpapers/wp5.png
+home/.config/hypr/wallpapers/wp5.jpg
