@@ -6,7 +6,7 @@
 
 window#waybar {
   background-color: rgba(43, 48, 59, 0.66);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
   color: #ffffff;
   transition-property: background-color;
   transition-duration: .5s;
@@ -95,9 +95,11 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#custom-power {
+#custom-power,
+#window {
   padding: 0 10px;
   color: #ffffff;
+  border-radius: 16px;
 }
 
 #window,
@@ -116,18 +118,18 @@ button:hover {
 }
 
 #clock {
-  background-color: #64727D;
+  background-color: rgba(100, 114, 125, 0.66);
 }
 
 #battery {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.66);
   color: #000000;
 }
 
 #battery.charging,
 #battery.plugged {
   color: #ffffff;
-  background-color: #26A65B;
+  background-color: rgba(38, 166, 91, 0.66);
 }
 
 @keyframes blink {
@@ -139,7 +141,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
+  background-color: rgba(245, 60, 60, 0.66);
   color: #ffffff;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -197,12 +199,12 @@ label:focus {
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
+  background-color: rgba(241, 196, 15, 0.66);
   color: #000000;
 }
 
 #pulseaudio.muted {
-  background-color: #90b1b1;
+  background-color: rgba(144, 177, 177, 0.66);
   color: #2a5c45;
 }
 
@@ -216,7 +218,7 @@ label:focus {
 }
 
 #custom-media {
-  background-color: #66cc99;
+  background-color: rgba(102, 204, 153, 0.66);
   color: #2a5c45;
   min-width: 100px;
 }
@@ -238,7 +240,7 @@ label:focus {
 }
 
 #tray {
-  background-color: #2980b9;
+  background-color: rgba(41, 128, 185, 0.66);
 }
 
 #tray>.passive {
@@ -247,7 +249,7 @@ label:focus {
 
 #tray>.needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+  background-color: rgba(235, 77, 75, 0.66);
 }
 
 #idle_inhibitor {
@@ -330,5 +332,10 @@ label:focus {
 }
 
 #custom-power {
-  padding: 0px 6px 4px 0px;
+  padding: 0px 4px 2px 0px;
+  background-color: rgba(100, 114, 125, 0.66);
+}
+
+#window {
+  background-color: rgba(100, 114, 125, 0.66);
 }

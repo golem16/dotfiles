@@ -7,22 +7,49 @@
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces"
-    // "sway/mode",
+    "hyprland/workspaces",
+    "hyprland/submap"
     // "sway/scratchpad",
     // "custom/media"
   ],
+  // "hyprland/workspaces": {
+  //   "all-outputs": true,
+  //   "persistent-workspaces": {
+  //     "1": [],
+  //     "2": [],
+  //     "3": [],
+  //     "4": [],
+  //     "5": [],
+  //     "6": [],
+  //     "7": [],
+  //     "8": [],
+  //     "9": [],
+  //     "10": []
+  //   }
+  // },
+  "tray": {
+    "icon-size": 28,
+    "spacing": 10,
+    "reverse-direction": true,
+    "show-passive-items": true,
+    "icons": {
+      "blueman": "bluetooth"
+      // "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    }
+  },
   "modules-center": [
     "hyprland/window"
   ],
   "hyprland/window": {
-    "max-length": 32
+    "max-length": 32,
+    "icon": true
   },
   "modules-right": [
-    "custom/media",
     // "idle_inhibitor",
+    "custom/media",
     "tray",
-    "network",
+    // nm-applet kind of replaces this
+    // "network", 
     // "wireplumber",
     "pulseaudio",
     // "cpu",
@@ -31,7 +58,7 @@
     // "backlight",
     // "keyboard-state",
     // "sway/language",
-    "power-profiles-daemon",
+    // "power-profiles-daemon",
     "battery",
     "clock",
     // "battery#bat2",
@@ -51,14 +78,6 @@
     "format-icons": {
       "activated": "",
       "deactivated": ""
-    }
-  },
-  "tray": {
-    "icon-size": 28,
-    "spacing": 10,
-    "icons": {
-      "blueman": "bluetooth"
-      // "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
     }
   },
   "clock": {
@@ -147,9 +166,10 @@
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     // {format_source} is the mic
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} ",
-    "format-bluetooth-muted": " {icon} ",
+    "format": "{volume}%",
+    // "format-bluetooth": "{volume}% {icon} ",
+    "format-bluetooth": "{volume}% ",
+    "format-bluetooth-muted": " ",
     "format-muted": "",
     "format-source": "{volume}% ",
     "format-source-muted": "",
@@ -177,18 +197,6 @@
     "exec": "python3 $HOME/.config/waybar/mediaplayer_fork.py 2> /dev/null", // Script in resources folder
     "on-click": "playerctl play-pause"
   },
-  // "custom/media": {
-  //   "format": "{icon} {text}",
-  //   "return-type": "json",
-  //   "max-length": 40,
-  //   "format-icons": {
-  //     "spotify": "",
-  //     "default": "🎜"
-  //   },
-  //   "escape": true,
-  //   "exec": "python3 $HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-  //   // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-  // },
   "custom/power": {
     "format": " ⏻ ",
     "tooltip": false,
