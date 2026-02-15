@@ -195,12 +195,14 @@
   },
   "custom/media": {
     // "format": "{icon} {text}",
-    "format": "{text}",
+    "format": "{alt}",
     "return-type": "json",
     "max-length": 16,
     "escape": true,
     "exec": "python3 $HOME/.config/waybar/mediaplayer_fork.py 2> /dev/null", // Script in resources folder
-    "on-click": "playerctl play-pause"
+    "on-click": "playerctl play-pause",
+    "tooltip": true,
+    "tooltip-format": "{text}"
   },
   "custom/power": {
     "format": " ⏻ ",

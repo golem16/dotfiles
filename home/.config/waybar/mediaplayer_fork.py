@@ -64,12 +64,16 @@ class PlayerManager:
     def get_players(self) -> List[Player]:
         return self.manager.props.players
 
-    def write_output(self, text, player):
+    def write_output(self, text,play_status, player):
         logger.debug(f"Writing output: {text}")
 
         output = {"text": text,
+                  # This does not work. It should work. It does not.
+                  # "playing": play_status
+                  "alt": play_status,
                   "class": "custom-" + player.props.player_name,
-                  "alt": player.props.player_name}
+                  # "alt": player.props.player_name}
+        }
 
         sys.stdout.write(json.dumps(output) + "\n")
         sys.stdout.flush()
@@ -133,6 +137,15 @@ class PlayerManager:
             else:
                 # track_info = "  " + track_info
                 track_info = "  " + player.props.player_name
+
+        # Play/pause button only
+        play_status = ""
+        if track_info:
+            track_info = player.props.player_name
+        if player.props.status == "Playing":
+            play_status = ""
+
+
         # only print output if no other player is playing
         current_playing = self.get_first_playing_player()
         # for p in player.props:
@@ -142,7 +155,7 @@ class PlayerManager:
         # print(player.props.source)
         # print(player.props.metadata)
         if current_playing is None or current_playing.props.player_name == player.props.player_name:
-            self.write_output(track_info, player)
+            self.write_output(track_info, play_status, player)
         else:
             logger.debug(f"Other player {current_playing.props.player_name} is playing, skipping")
 
