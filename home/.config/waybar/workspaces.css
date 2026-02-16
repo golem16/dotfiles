@@ -2,8 +2,8 @@
   background-color: @bg-color;
   color: @text-color;
   border-radius: 16px;
-  padding: 0 12px;
-  border: 3px solid @bar-border;
+  padding: 0 6px;
+  border: 2px solid @bar-border;
 }
 
 button {
@@ -39,9 +39,16 @@ button:hover {
   color: @text-color;
 
   /* margin: 0 2px; */
-  /* border-radius: 16px; */
+
+  border-radius: 16px;
   border: none;
   box-shadow: none;
+
+  /* margin-top: 3px;
+  margin-bottom: 3px; */
+  /* y x */
+  margin: 3px 2px;
+  font-size: 12px;
 
   /* min-height: 32px;
   min-width: 32px;

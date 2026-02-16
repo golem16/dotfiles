@@ -12,21 +12,24 @@
     // "sway/scratchpad",
     // "custom/media"
   ],
-  // "hyprland/workspaces": {
-  //   "all-outputs": true,
-  //   "persistent-workspaces": {
-  //     "1": [],
-  //     "2": [],
-  //     "3": [],
-  //     "4": [],
-  //     "5": [],
-  //     "6": [],
-  //     "7": [],
-  //     "8": [],
-  //     "9": [],
-  //     "10": []
-  //   }
-  // },
+  // "margin-top": 4,
+  // "margin-left": 4,
+  // "margin-right": 4,
+  "hyprland/workspaces": {
+    // "all-outputs": true,
+    // "persistent-workspaces": {
+    //   "1": [],
+    //   "2": [],
+    //   "3": [],
+    //   "4": [],
+    //   "5": [],
+    //   "6": [],
+    //   "7": [],
+    //   "8": [],
+    //   "9": [],
+    //   "10": []
+    // }
+  },
   "tray": {
     "icon-size": 28,
     "spacing": 10,
