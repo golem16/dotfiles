@@ -139,11 +139,13 @@ class PlayerManager:
                 track_info = "  " + player.props.player_name
 
         # Play/pause button only
-        play_status = ""
+        # play_status = ""
+        play_status = "󰐊"
         if track_info:
             track_info = player.props.player_name
         if player.props.status == "Playing":
-            play_status = ""
+            # play_status = ""
+            play_status = "󰏤"
 
 
         # only print output if no other player is playing

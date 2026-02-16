@@ -2,7 +2,8 @@
   background-color: @bg-color;
   color: @text-color;
   border-radius: 16px;
-  padding: 0 16px;
+  padding: 0 12px;
+  /* margin: 0 12px; */
   border: 3px solid @bar-border;
 }
 
@@ -18,14 +19,14 @@
   /* background-color: rgba(241, 196, 15, 0.66); */
   /* color: #000000; */
   /* color: rgba(241, 196, 15, 1.0); */
-  color: rgb(14, 165, 241);
-
+  /* color: rgb(14, 165, 241); */
+  color: @text-color;
 }
 
 #pulseaudio.muted {
   /* background-color: rgba(144, 177, 177, 0.66); */
   /* color: #2a5c45; */
-  color: rgba(144, 177, 177, 1.0);
+  color: rgb(144, 177, 177);
 
 }
 
@@ -39,13 +40,13 @@
 #battery.plugged {
   /* color: @text-color;
   background-color: rgba(38, 166, 91, 0.66); */
-  color: rgba(38, 166, 91, 1.0);
+  color: rgb(38, 166, 91);
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   /* background-color: rgba(245, 60, 60, 0.66); */
-  color: rgba(245, 60, 60, 1.0);
+  color: rgb(245, 60, 60);
   /* color: @text-color; */
   animation-name: blink;
   animation-duration: 0.5s;
@@ -59,8 +60,7 @@
 } */
 
 #custom-power {
-
   padding: 0px 4px 2px 0px;
   background-color: rgba(100, 114, 125, 0.0);
-  min-width: 28px;
+  /* min-width: 28px; */
 }
