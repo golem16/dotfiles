@@ -42,7 +42,10 @@
   ],
   "hyprland/window": {
     "max-length": 32,
-    "icon": true
+    "icon": true,
+    // "rewrite": {
+    //   "": "None"
+    // }
   },
   "modules-right": [
     // "idle_inhibitor",
