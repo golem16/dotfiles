@@ -1,0 +1,16 @@
+#tray {
+  background-color: @bg-color;
+  color: @text-color;
+  border-radius: 16px;
+  padding: 0 16px;
+  border: 3px solid @bar-border;
+}
+
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: rgba(235, 77, 75, 0.66);
+}

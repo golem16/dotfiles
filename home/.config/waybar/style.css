@@ -1,3 +1,9 @@
+@import url("theme.css");
+@import url("workspaces.css");
+@import url("window-title.css");
+@import url("tray.css");
+@import url("taskbar.css");
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "CaskaydiaMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -5,34 +11,21 @@
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.66);
+  background-color: rgba(0, 0, 0, 0.0);
+  color: @text-color;
+  /* background-color: rgba(43, 48, 59, 0.0); */
   /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-  color: #ffffff;
   transition-property: background-color;
   transition-duration: .5s;
+
+  margin: 10px;
+
+  /* border: 3px solid @bar-border; */
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-  background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-  background-color: #000000;
-  border: none;
-}
+/* window#waybar>box {
+  padding: 5px;
+} */
 
 button {
   /* Use box-shadow instead of border so the text isn't offset */
@@ -45,112 +38,56 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px @text-color;
 }
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
+/* #pulseaudio:hover {
   background-color: #a37800;
-}
+} */
 
-#workspaces button {
-  /* padding: 0 5px; */
-  background-color: transparent;
-  color: #ffffff;
-  /* margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 16px; */
-}
 
-#workspaces button:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused,
-#workspaces button.active {
-  background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-  background-color: #eb4d4b;
-}
 
 #mode {
   background-color: #64727D;
-  /* box-shadow: inset 0 -3px #ffffff; */
+  /* box-shadow: inset 0 -3px @text-color; */
 }
 
 #clock,
-#battery,
 #cpu,
 #memory,
 #disk,
 #temperature,
 #backlight,
 #network,
-#pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd,
-#custom-power,
-#window {
+#mpd {
   padding: 0 10px;
-  color: #ffffff;
+  color: @text-color;
   border-radius: 16px;
 }
 
-#window,
-#workspaces {
-  margin: 0 4px;
-}
+/* .modules-right {
+  background-color: @bg-color;
+  color: @text-color;
+  border-radius: 16px;
+  padding: 0 16px;
+  border: 3px solid @bar-border;
+} */
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-  margin-left: 0;
-}
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-  margin-right: 0;
-}
 
-#clock {
-  background-color: rgba(100, 114, 125, 0.66);
-}
-
-#battery {
-  background-color: rgba(255, 255, 255, 0.66);
-  color: #000000;
-}
-
-#battery.charging,
-#battery.plugged {
-  color: #ffffff;
-  background-color: rgba(38, 166, 91, 0.66);
-}
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
+    background-color: @text-color;
     color: #000000;
   }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-  background-color: rgba(245, 60, 60, 0.66);
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 #power-profiles-daemon {
@@ -159,12 +96,12 @@ button:hover {
 
 #power-profiles-daemon.performance {
   background-color: #f53c3c;
-  color: #ffffff;
+  color: @text-color;
 }
 
 #power-profiles-daemon.balanced {
   background-color: #2980b9;
-  color: #ffffff;
+  color: @text-color;
 }
 
 #power-profiles-daemon.power-saver {
@@ -201,16 +138,6 @@ label:focus {
   background-color: #f53c3c;
 }
 
-#pulseaudio {
-  background-color: rgba(241, 196, 15, 0.66);
-  color: #000000;
-}
-
-#pulseaudio.muted {
-  background-color: rgba(144, 177, 177, 0.66);
-  color: #2a5c45;
-}
-
 #wireplumber {
   background-color: #fff0f5;
   color: #000000;
@@ -236,19 +163,6 @@ label:focus {
 
 #temperature.critical {
   background-color: #eb4d4b;
-}
-
-#tray {
-  background-color: rgba(41, 128, 185, 0.66);
-}
-
-#tray>.passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: rgba(235, 77, 75, 0.66);
 }
 
 #idle_inhibitor {
@@ -330,12 +244,6 @@ label:focus {
   background-color: #0069d4;
 }
 
-#custom-power {
-  padding: 0px 4px 2px 0px;
-  background-color: rgba(100, 114, 125, 0.66);
-  min-width: 28px;
-}
-
 #custom-media {
   background-color: rgba(102, 204, 153, 0.66);
   color: #2a5c45;
@@ -344,8 +252,4 @@ label:focus {
   font-size: 28px;
 
   min-width: 28px;
-}
-
-#window {
-  background-color: rgba(100, 114, 125, 0.66);
 }

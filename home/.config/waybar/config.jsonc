@@ -2,7 +2,7 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 40, // Waybar height (to be removed for auto height)
+  "height": 42, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
@@ -50,20 +50,17 @@
     "tray",
     // nm-applet kind of replaces this
     // "network", 
-    // "wireplumber",
-    "pulseaudio",
-    // "cpu",
-    // "memory",
-    // "temperature",
-    // "backlight",
-    // "keyboard-state",
-    // "sway/language",
-    // "power-profiles-daemon",
-    "battery",
-    "clock",
-    // "battery#bat2",
-    "custom/power"
+    "group/taskbar"
   ],
+  "group/taskbar": {
+    "orientation": "inherit",
+    "modules": [
+      "pulseaudio",
+      "battery",
+      "clock",
+      "custom/power"
+    ]
+  },
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
@@ -132,17 +129,22 @@
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% 󱐋",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󰂎",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
     ]
   },
   // Maybe have a menu for this, if possible
