@@ -2,19 +2,20 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 40, // Waybar height (to be removed for auto height)
+  "height": 42, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 8, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/submap"
+    "hyprland/workspaces"
+    // "hyprland/submap"
+    // "wlr/taskbar"
     // "sway/scratchpad",
     // "custom/media"
   ],
-  // "margin-top": 4,
-  // "margin-left": 4,
-  // "margin-right": 4,
+  "wlr/taskbar": {
+    "icon-size": 24
+  },
   "hyprland/workspaces": {
     // "all-outputs": true,
     // "persistent-workspaces": {
@@ -31,7 +32,7 @@
     // }
   },
   "tray": {
-    "icon-size": 30,
+    "icon-size": 28,
     "spacing": 10,
     "reverse-direction": true,
     "show-passive-items": true,
@@ -56,9 +57,9 @@
     "tray",
     // nm-applet kind of replaces this
     // "network", 
-    "group/taskbar"
+    "group/utilbar"
   ],
-  "group/taskbar": {
+  "group/utilbar": {
     "orientation": "inherit",
     "modules": [
       "pulseaudio",

@@ -1,9 +1,10 @@
 @import url("theme.css");
 @import url("workspaces.css");
+@import url("taskbar.css");
 @import url("window-title.css");
 @import url("mpris.css");
 @import url("tray.css");
-@import url("taskbar.css");
+@import url("utilbar.css");
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
