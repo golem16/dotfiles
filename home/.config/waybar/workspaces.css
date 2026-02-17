@@ -4,6 +4,8 @@
   border-radius: 16px;
   padding: 0 6px;
   border: 2px solid @bar-border;
+
+  font-size: 18px;
 }
 
 button {
