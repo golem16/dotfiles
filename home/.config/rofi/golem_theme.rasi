@@ -1,0 +1,121 @@
+/*
+
+Rofi custom theme to be more in line with my waybar config
+
+Based on "Material" by Tomaszal
+
+User: golem16
+
+*/
+
+* {
+
+  bgcolor: #2b2d3b;
+  bgcolor-secondary: #404359;
+  bgcolor-tertiary: #555977;
+
+
+  bordercolor: #515670;
+  textcolor: #dadada;
+  textcolor-secondary: #adadad;
+
+  /* 
+  scrollbar-fg: ;
+  scrollbar-bg: ; */
+
+
+  spacing: 0;
+  background-color: transparent;
+}
+
+window {
+  background-color: @bgcolor;
+
+  width: 33%;
+  height: 50%;
+
+  border-radius: 16px;
+  border: 2px;
+  border-color: @bordercolor;
+}
+
+mainbox {
+  children: [inputbar, message, listview];
+  spacing: 24px;
+  padding: 24px 0;
+}
+
+/* Input */
+inputbar {
+  padding: 0 30px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @textcolor;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  margin: 0 16px 0 0;
+  text-color: @textcolor;
+}
+
+entry {
+  text-color: @textcolor-secondary;
+}
+
+case-indicator {
+  text-color: @textcolor-secondary;
+}
+
+/*  */
+
+/* Listview */
+listview {
+  scrollbar: true;
+  margin: 0 10px 0 24px;
+}
+
+scrollbar {
+  background-color: @bgcolor-secondary;
+  handle-color: @bgcolor-tertiary;
+  handle-width: 24px;
+  /* border: 0 2px;
+  border-color: @bordercolor; */
+  /* border-radius: 8px; */
+
+  margin: 0 0 0 24px;
+}
+
+element {
+  /* padding: 8px; */
+  padding: 12px 24px 12px 24px;
+  spacing: 16px;
+
+  border-radius: 16px;
+
+  highlight: bold underline;
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  size: 50px;
+}
+
+element-text {
+  vertical-align: 0.5;
+  text-color: @textcolor;
+  font: "CaskaydiaMono Nerd Font 12";
+}
+
+element normal {
+  background-color: transparent;
+}
+
+element selected {
+  background-color: @bgcolor-secondary;
+}
+
+/*  */
