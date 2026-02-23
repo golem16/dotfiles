@@ -1,0 +1,27 @@
+/* .notification-row {
+  background: none;
+  outline: none;
+}
+
+.notification-row:focus {
+  background: var(--noti-bg-focus);
+} */
+
+/* .notification-row .notification-background {
+  padding: 6px 12px;
+} */
+
+.notification-row .notification-background .notification {
+  /* The actual notification */
+  border-radius: var(--golem-border-radius);
+  border: var(--golem-border);
+  padding: 8px;
+  background: var(--golem-bg-color);
+
+  /* min-height: 32px; */
+}
+
+/* .notification-row .notification-background .notification .notification-default-action:hover {
+  -gtk-icon-filter: none;
+  background: var(--golem-bg-secondary);
+} */
