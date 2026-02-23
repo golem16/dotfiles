@@ -26,6 +26,19 @@ window#waybar {
   /* border: 3px solid @bar-border; */
 }
 
+tooltip {
+  background-color: transparent;
+  border: none;
+
+  background-color: @bg-color;
+  color: @text-color;
+  border-radius: 16px;
+  /* padding: 0 2px; */
+  /* margin: 0 12px; */
+  border: 2px solid @bar-border;
+  font-size: 18px;
+}
+
 /* window#waybar>box {
   padding: 5px;
 } */
@@ -34,6 +47,8 @@ window#waybar {
 /* #pulseaudio:hover {
   background-color: #a37800;
 } */
+
+
 
 
 

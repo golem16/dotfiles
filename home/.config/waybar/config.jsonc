@@ -215,7 +215,8 @@
   },
   "custom/power": {
     "format": " ⏻ ",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Power",
     "on-click": "$HOME/.config/rofi/menus/power.sh"
     // "menu": "on-click",
     // "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
