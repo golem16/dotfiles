@@ -2,6 +2,10 @@
 @define-color bg-color #2b2d3b;
 @define-color bar-border #515670;
 @define-color text-color #dadada;
+@define-color text-color-secondary #a3a3a3;
 
 @define-color button-bg-color #45485f;
 @define-color button-fg-color #5a5f7c;
+
+@define-color battery-charging #57a875;
+@define-color battery-low #a85757;

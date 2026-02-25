@@ -27,8 +27,8 @@
 #pulseaudio.muted {
   /* background-color: rgba(144, 177, 177, 0.66); */
   /* color: #2a5c45; */
-  color: rgb(144, 177, 177);
-
+  /* color: rgb(144, 177, 177); */
+  color: @text-color-secondary;
 }
 
 #battery {
@@ -41,13 +41,15 @@
 #battery.plugged {
   /* color: @text-color;
   background-color: rgba(38, 166, 91, 0.66); */
-  color: rgb(38, 166, 91);
+  /* color: rgb(38, 166, 91); */
+  color: @battery-charging;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   /* background-color: rgba(245, 60, 60, 0.66); */
-  color: rgb(245, 60, 60);
+  /* color: rgb(245, 60, 60); */
+  color: @battery-low;
   /* color: @text-color; */
   animation-name: blink;
   animation-duration: 0.5s;
