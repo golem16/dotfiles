@@ -63,6 +63,7 @@
     "orientation": "inherit",
     "modules": [
       "pulseaudio",
+      // "wireplumber",
       "battery",
       "clock",
       "custom/power"
@@ -138,7 +139,7 @@
     "format-full": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󰂄",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
+    // "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
@@ -176,6 +177,16 @@
     // "format-disconnected": "Disconnected ⚠",
     "format-disconnected": "⚠ X",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "{volume}% ",
+    "on-click": "hyprpwcenter",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
