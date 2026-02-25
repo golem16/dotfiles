@@ -6,3 +6,6 @@ home/.config/hypr/wallpapers/wp8.png
 home/.config/hypr/wallpapers/wp7.png
 home/.config/hypr/wallpapers/wp5.png
 home/.config/hypr/wallpapers/wp5.jpg
+
+# NeoVim still needs configuring
+home/.config/nvim

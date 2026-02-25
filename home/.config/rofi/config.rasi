@@ -1,6 +1,6 @@
 configuration {
   /*	modes: "window,drun,run,ssh";*/
-  font: "CaskaydiaMono Nerd Font 14";
+  font: "CaskaydiaMono Nerd Font Mono 14";
   /*	location: 0;*/
   /*	yoffset: 0;*/
   /*	xoffset: 0;*/

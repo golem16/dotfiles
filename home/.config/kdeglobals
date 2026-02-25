@@ -3,5 +3,8 @@ EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
 
 [General]
-# We don't use konsole
+# We don't use Konsole
 TerminalApplication=kitty
+
+[UiSettings]
+ColorScheme=kvantum
