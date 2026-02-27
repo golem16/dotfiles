@@ -1,11 +1,13 @@
 #utilbar {
   background-color: @bg-color;
   color: @text-color;
-  border-radius: 16px;
+  font-size: 20px;
   /* padding: 0 2px; */
   /* margin: 0 12px; */
-  border: 2px solid @bar-border;
-  font-size: 20px;
+  /* border-radius: 16px;
+  border: 2px solid @bar-border; */
+  border-bottom: 2px solid @bar-border;
+
 }
 
 #pulseaudio,

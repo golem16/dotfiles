@@ -7,17 +7,21 @@
 @import url("utilbar.css");
 
 * {
+  /* background-color: rgba(34, 36, 47, 0.33); */
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "CaskaydiaMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.0);
-  /* background-color: @bg-color; */
+  /* background-color: rgba(0, 0, 0, 0.0); */
+  /* background-color: rgba(34, 36, 47, 0.66); */
+  background-color: @bg-color;
+  border-bottom: 2px solid @bar-border;
+  /* opacity: 0.5; */
+
 
   color: @text-color;
   /* background-color: rgba(43, 48, 59, 0.0); */
-  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
   transition-property: background-color;
   transition-duration: .5s;
 
