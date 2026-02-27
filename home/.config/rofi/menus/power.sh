@@ -23,7 +23,7 @@ case $power_result in
     ;;
 
   "$LOGOUT")
-    hyprshutdown --post-cmd 'loginctl kill-session $XDG_SESSION_ID' || hyprctl dispatch exit
+    pidof hyprshutdown || hyprshutdown --post-cmd 'loginctl kill-session $XDG_SESSION_ID' || hyprctl dispatch exit
     ;;
 
   "$SLEEP")
@@ -31,11 +31,11 @@ case $power_result in
     ;;
 
   "$SHUTDOWN")
-    hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
+    pidof hyprshutdown || hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
     ;;
   
   "$RESTART")
-    hyprshutdown -t 'Restarting...' --post-cmd 'reboot'
+    pidof hyprshutdown || hyprshutdown -t 'Restarting...' --post-cmd 'reboot'
     ;;
 
     # *)
