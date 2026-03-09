@@ -1,4 +1,4 @@
-#custom-media {
+#mpris {
 
   /* background-color: @bg-color; */
   color: @text-color;
@@ -6,12 +6,8 @@
   border-radius: 32px;
   background-color: @button-bg-color;
 
-
-  /* margin: 0px 0px; */
   margin-top: 3px;
-  margin-bottom: 5px;
-  /* margin-left: 5px; */
-
+  margin-bottom: 3px;
 
   /* background-color: rgba(102, 204, 153, 0.66); */
   /* color: #2a5c45; */
@@ -20,12 +16,11 @@
 
   /* padding: 0px 9px 0px 12px; */
   /* 
-  padding: 0px 8px 2px 0px;
+  padding: 0px 8px 2px 0px;mpris
   min-width: 28px; */
 }
 
 
-#custom-media:hover {
+#mpris:hover {
   background: @button-fg-color;
-
 }

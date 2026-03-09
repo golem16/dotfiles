@@ -53,7 +53,7 @@
   },
   "modules-right": [
     // "idle_inhibitor",
-    "custom/media",
+    "mpris",
     "tray",
     // nm-applet kind of replaces this
     // "network", 
@@ -213,16 +213,15 @@
     },
     "on-click": "pavucontrol"
   },
-  "custom/media": {
-    // "format": "{icon} {text}",
-    "format": "{alt}",
-    "return-type": "json",
-    "max-length": 16,
-    "escape": true,
-    "exec": "python3 $HOME/.config/waybar/mediaplayer_fork.py 2> /dev/null", // Script in resources folder
-    "on-click": "playerctl play-pause",
-    "tooltip": true,
-    "tooltip-format": "{text}"
+  "mpris": {
+    "format": "{player_icon}",
+    "format-paused": "{status_icon}",
+    "player-icons": {
+      "default": " ⏸ "
+    },
+    "status-icons": {
+      "paused": " ▶ "
+    }
   },
   "custom/power": {
     "format": " ⏻ ",
