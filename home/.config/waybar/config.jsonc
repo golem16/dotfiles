@@ -7,14 +7,14 @@
   "spacing": 8, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
     // "hyprland/submap"
-    // "wlr/taskbar"
+    "wlr/taskbar"
     // "sway/scratchpad",
     // "custom/media"
   ],
   "wlr/taskbar": {
-    "icon-size": 24
+    "icon-size": 28
   },
   "hyprland/workspaces": {
     // "all-outputs": true,
