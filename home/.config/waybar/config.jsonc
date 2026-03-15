@@ -46,7 +46,7 @@
   ],
   "hyprland/window": {
     "max-length": 32,
-    "icon": true,
+    "icon": true
     // "rewrite": {
     //   "": "None"
     // }
@@ -86,9 +86,9 @@
     }
   },
   "clock": {
-    "timezone": "America/New_York",
+    "timezone": "",
     // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "tooltip-format": "<big>{:%D}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%D}</big>\n<tt><small>{calendar}</small></tt>"
     // "format-alt": "{:%Y-%m-%d}"
     // "interval": 60,
     // "tooltip": true,
