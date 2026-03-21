@@ -9,3 +9,5 @@ home/.config/hypr/wallpapers/wp5.jpg
 
 # NeoVim still needs configuring
 home/.config/nvim
+
+home/.config/hypr/modules/plugins_private.conf

@@ -20,3 +20,6 @@ bindkey '\e[B' history-search-forward
 
 # omp
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin_mocha_fork.omp.json)"
+
+# Rust
+export PATH=/.cargo/bin:$PATH
