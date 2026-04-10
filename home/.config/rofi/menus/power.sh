@@ -1,3 +1,5 @@
+#!/usr/bin/zsh
+
 # power_result=$(printf "Sleep\nHibernate\nShutdown\nRestart\nLogout" | rofi -dmenu -no-history -p "Power")
 # power_result=$(printf "Lock\nLogout\nSleep\nShutdown\nRestart" | rofi -dmenu -no-history -show-icons -p "Power")
 # power_result=$(printf "Lock\0icon\x1fsystem-lock-screen-symbolic
