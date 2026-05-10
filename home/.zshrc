@@ -25,3 +25,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin_mocha_fork.
 export PATH=/.cargo/bin:$PATH
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# . "$HOME/.local/bin/env"
+source $HOME/.local/bin/env
