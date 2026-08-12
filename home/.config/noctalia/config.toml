@@ -20,16 +20,16 @@ shadow             = true        # cast the global [shell.shadow]
 contact_shadow     = false       # dark gradient between an attached panel and the bar (depth at the seam)
 panel_overlap      = 1           # logical px an attached panel overlaps the bar edge to hide the seam
 radius             = 12          # global corner radius fallback
-radius_top_left    = 12
-radius_top_right   = 12
-radius_bottom_left = 12
-radius_bottom_right = 12
+radius_top_left    = 0
+radius_top_right   = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
 concave_edge_corners = true      # carve the screen-edge corners inward; requires margin_edge = 0
 margin_ends        = 0         # inset from each end of the bar along its main axis
 margin_edge        = 0           # distance from the nearest screen edge (positive values float the bar)
 margin_opposite_edge = 0         # extra reserved space on the inward side of the bar (below for top, above for bottom)
 padding            = 14          # main-axis padding from bar edges to start/end widget sections
-widget_spacing     = 12           # gap between widgets within a section
+widget_spacing     = 16           # gap between widgets within a section
 hover_highlight    = true        # softly tint the widget under the mouse pointer with its foreground color
 scale              = 1.4         # content scale multiplier for icons and text
 font_weight        = 500         # CSS weight 100–1000 (e.g. 400 regular, 700 bold); primary label weight for bar widgets
@@ -43,6 +43,7 @@ capsule_radius     = 8.0            # omit for automatic pill radius
 capsule_opacity    = 1.0
 # capsule_border   = "outline"   # omit this key for no border by default
 
-start  = ["wallpaper", "workspaces","taskbar"]
+start  = ["control-center", "wallpaper", "workspaces","taskbar"]
 center = ["active_window"]
-end    = ["media", "tray","clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "notifications", "clock"] # "session"
+# Removed: "clipboard", "session", "brightness"
+end    = ["media", "tray", "bluetooth", "volume",  "network","battery", "clock", "notifications"]

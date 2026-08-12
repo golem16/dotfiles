@@ -12,9 +12,8 @@ hl.bind(MainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 hl.bind(MainMod .. " + C", hl.dsp.window.close())
 hl.bind(MainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
--- hl.bind(MainMod .. " + F", hl.dsp.window.fullscreen({ { internal = -1, client = -1 } }))
--- hl.bind(MainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = 1, client = 0 }))
-hl.bind(MainMod .. " + F11", hl.dsp.window.fullscreen())
+hl.bind(MainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+hl.bind(MainMod .. " + F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 
 
