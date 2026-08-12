@@ -1,0 +1,6 @@
+[wallpaper]
+enabled = true
+fill_mode = "center"
+
+[wallpaper.default]
+path = "~/.config/hypr/wallpapers/current.jpg"

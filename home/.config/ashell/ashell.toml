@@ -1,0 +1,31 @@
+[appearance]
+scale_factor = 1.5
+style = "Solid"
+font_name = "CaskaydiaMono Nerd Font"
+
+[osd]
+enabled = true
+timeout = 1500
+show_volume_percentage = true
+show_brightness_percentage = true
+
+# Default module layout:
+# left = ["Workspaces"]
+# center = ["WindowTitle"]
+# right = ["SystemInfo", "MediaPlayer", ["Tray", "Tempo", "Privacy", "Settings"]]
+[modules]
+left = ["Workspaces"]
+center = ["WindowTitle"]
+# right = ["SystemInfo", "MediaPlayer", ["Tray", "Tempo", "Privacy", "Settings"]]
+right = ["MediaPlayer", "Tray", "Tempo", "Privacy", "Settings"]
+
+[media_player]
+# max_title_length = 50
+indicator_format = "Icon"
+
+
+[settings]
+shutdown_cmd = "pidof hyprshutdown || hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'"
+suspend_cmd = "systemctl suspend -i"
+reboot_cmd = "pidof hyprshutdown || hyprshutdown -t 'Restarting...' --post-cmd 'reboot'"
+logout_cmd = "pidof hyprshutdown || hyprshutdown -t 'Logging out...' --post-cmd 'loginctl kill-session $XDG_SESSION_ID' || hyprctl dispatch exit"
