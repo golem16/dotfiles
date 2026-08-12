@@ -12,10 +12,6 @@ hl.on("hyprland.start", function()
 
   --
   hl.exec_cmd("noctalia")
-  -- hl.exec_cmd("waybar")
-  -- hl.exec_cmd("ashell --config-path ~/.config/ashell/ashell.toml")
-  -- hl.exec_cmd("swayosd-server & swaync")
-  -- hl.exec_cmd("swaync")
   hl.exec_cmd("nm-applet & blueman-applet & opensnitch-ui")
   hl.exec_cmd("gsr-ui")
 
