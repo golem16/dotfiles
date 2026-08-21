@@ -11,13 +11,13 @@ hl.on("hyprland.start", function()
   --
   hl.exec_cmd("hyprcursor")
 
-
   --
-  hl.exec_cmd("nm-applet & blueman-applet & opensnitch-ui")
+  hl.exec_cmd("nm-applet & blueman-applet")
   hl.exec_cmd("gsr-ui")
 
   --
-  hl.exec_cmd("mullvad-vpn")
+  hl.exec_cmd("sleep 4 && opensnitch-ui")
+  hl.exec_cmd("sleep 4 && mullvad-vpn")
 
   --
   -- hl.exec_cmd("wl-paste --type text --watch cliphist store")
