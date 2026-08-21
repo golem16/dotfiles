@@ -1,10 +1,2 @@
 [widget.network]
 show_label = false
-
-[widget.tray]
-# hidden = ["nm-applet", "blueman", "org.kde.StatusNotifierItem-1-1"]
-# pinned = ["nm-applet"]
-drawer = true
-drawer_columns = 3
-drawer_item_size = 20
-detached_panel = false

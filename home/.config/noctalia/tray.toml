@@ -1,0 +1,7 @@
+[widget.tray]
+# hidden = ["nm-applet", "blueman", "org.kde.StatusNotifierItem-1-1"]
+# pinned = ["mullvad-vpn"]
+drawer = true
+drawer_columns = 5
+drawer_item_size = 20
+detached_panel = false

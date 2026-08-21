@@ -16,9 +16,10 @@ hl.bind(MainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action
 hl.bind(MainMod .. " + F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 
+-- Alt+Tab (standard MRU)
+hl.bind(MainMod .. "+ Tab", hl.dsp.exec_cmd("snappy-switcher next --mod super"))
 
-
--- Switch workspaces with mainMod + [0-9]
+-- Switch workspaces with mainMoMainMod .. d + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
