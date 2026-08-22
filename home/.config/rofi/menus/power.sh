@@ -25,7 +25,7 @@ case $power_result in
     ;;
 
   "$LOGOUT")
-    pidof hyprshutdown || hyprshutdown -t 'Logging out...' --post-cmd 'loginctl kill-session $XDG_SESSION_ID' || hyprctl dispatch exit
+    pidof hyprshutdown || hyprshutdown -t 'Logging out...' --post-cmd 'loginctl kill-session $XDG_SESSION_ID'
     ;;
 
   "$SLEEP")

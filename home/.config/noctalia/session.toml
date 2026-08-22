@@ -1,0 +1,32 @@
+[shell.session]
+grid = false
+# grid_columns = 3
+# actions = []
+
+[[shell.session.actions]]
+action = "lock"
+countdown_seconds = 0.0
+enabled = true
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+countdown_seconds = 0.0
+enabled = true
+
+[[shell.session.actions]]
+action = "logout"
+countdown_seconds = 0.0
+enabled = true
+command = "pidof hyprshutdown || hyprshutdown -t 'Logging out...' --post-cmd 'loginctl kill-session $XDG_SESSION_ID'"
+
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 0.0
+enabled = true
+command = "pidof hyprshutdown || hyprshutdown -t 'Restarting...' --post-cmd 'reboot'"
+
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 0.0
+enabled = true
+command = "pidof hyprshutdown || hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'"

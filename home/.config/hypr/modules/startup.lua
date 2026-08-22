@@ -1,7 +1,7 @@
 hl.on("hyprland.start", function()
   --
   hl.exec_cmd("noctalia")
-  hl.exec_cmd("snappy-switcher --daemon")
+  -- hl.exec_cmd("snappy-switcher --daemon")
 
   -- These might alreday be enabled not sure
   hl.exec_cmd("systemctl --user start hyprpolkitagent")

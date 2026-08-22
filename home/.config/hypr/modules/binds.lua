@@ -7,7 +7,7 @@ hl.bind(MainMod .. " + R", hl.dsp.exec_cmd(Menu))
 hl.bind(MainMod .. " + L", hl.dsp.exec_cmd(Lock))
 hl.bind(MainMod .. " + M", hl.dsp.exec_cmd(PowerMenu))
 hl.bind(MainMod .. " + SPACE", hl.dsp.exec_cmd(Clipboard))
-hl.bind(MainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+-- hl.bind(MainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 
 hl.bind(MainMod .. " + C", hl.dsp.window.close())
@@ -15,9 +15,7 @@ hl.bind(MainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(MainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(MainMod .. " + F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
-
--- Alt+Tab (standard MRU)
-hl.bind(MainMod .. "+ Tab", hl.dsp.exec_cmd("snappy-switcher next --mod super"))
+hl.bind(MainMod .. "+ TAB", hl.dsp.exec_cmd(WindowSwitcher))
 
 -- Switch workspaces with mainMoMainMod .. d + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
