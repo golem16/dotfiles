@@ -9,6 +9,9 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("systemctl --user start hypridle.service")
 
   --
+  hl.exec_cmd("dispwin /usr/share/color/icc/colord/BOE_CQ_______NE160QDM_NZ6.icm")
+
+  --
   hl.exec_cmd("hyprcursor")
 
   --

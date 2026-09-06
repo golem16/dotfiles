@@ -4,7 +4,7 @@ hl.monitor({
   cm = "dcip3",
   vrr = 2,
   scale = 1.0,
-  icc = "/usr/share/color/icc/colord/BOE_CQ_______NE160QDM_NZ6.icm"
+  -- icc = "/usr/share/color/icc/colord/BOE_CQ_______NE160QDM_NZ6.icm"
 })
 
 hl.monitor({
